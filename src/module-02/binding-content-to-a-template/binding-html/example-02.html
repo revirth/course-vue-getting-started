@@ -14,7 +14,13 @@
             <p>This example shows how the <code>v-html</code> directive renders HTML.</p>
 
             <div id="growler">
-                <h2 v-html="appName"></h2>                
+                <h2>{{ appName }}</h2>
+                <h2 v-html="appName"></h2>
+                <ol>
+                    <li>Updateds the innerHTML property</li>
+                    <li>Cannot nest bindings??</li>
+                    <li>Only bind to HTML you trust <code>Do not bind to user-generated HTML</code></li>
+                </ol>
             </div>
         </div>
 

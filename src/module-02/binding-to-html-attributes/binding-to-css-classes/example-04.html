@@ -25,7 +25,26 @@
             <p>This example shows binding that's been refactored to use CSS classes.</p>
 
             <div id="growler">
-                <h2 v-text="appName" v-bind:class="{ 'headers': true, 'accent-color': isOnline}"></h2>                
+                <h2 v-text="appName" v-bind:class="{ 'headers': true, 'accent-color': isOnline}"></h2>
+                <ol>
+                    <li>Helps you maintain separation between your design and data</li>
+                    <li><code>Console창에서 growler.isOnline = !growler.isOnline; 반복실행</code></li>
+                </ol>
+
+                <h2 v-text="appName" 
+                    v-bind:style="{ color:isOnline ? '#FF6A00' : '#000' }"></h2>
+                <ol>
+                    <li>An expression is a type of statement</li>
+                </ol>
+
+                <h2 v-bind:style="{ color:isOnline ? '#FF6A00' : '#000' }">Whitelisted Globals</h2>
+                <code>
+                    <p><b>Properties</b><br>Infinity, undefined, NaN</p>
+                    <p><b>Functions</b><br>parseFloat, parseInt, isNaN, isFinite, decodeURI, decodeURIComponent, encodeURI, encodeURIComponent</p>
+                    <p><b>Objects</b><br>Math, Number, Date, Array, Object, Boolean, String, RegExp, Map, Set, JSON, Intl</p>
+                    <p><b>Webpack / Browerify<br>require</b></p>
+                </code>
+                
             </div>
         </div>
 
